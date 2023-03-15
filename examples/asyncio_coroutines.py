@@ -72,6 +72,7 @@ async def main(frames=150_000, channels=1, dtype='float32', **kwargs):
 
 if __name__ == "__main__":
     try:
-        asyncio.run(main())
+        while True:
+            asyncio.run(main())
     except KeyboardInterrupt:
-        sys.exit('\nInterrupted by user')
+            sys.exit('\nInterrupted by user')
